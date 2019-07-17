@@ -1,0 +1,28 @@
+div{
+    background-color: aliceblue;
+}
+
+.first{
+    background-color: antiquewhite;
+}
+.second{
+    background-color: aquamarine;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+div > ul > li{
+    float: left;
+}
+li{
+    width: 20%;
+    height: 10%;
+    background-color: bisque;
+    text-align: center;
+    list-style-type: none;
+    line-height: 50px;
+}
+div ul ul{
+    display: none;
+}
