@@ -45,7 +45,7 @@
         
         //2、在一级菜单上设置鼠标移出事件，二级菜单隐藏
         $('.second').mouseleave(function(){
-            $(this).children.hide();
+            $(this).children('ul').hide();
             //$(this).css('display','none')
         })
         
