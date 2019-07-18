@@ -6,29 +6,29 @@
         <script src="jquery-3.4.1.js"></script>
     </head>
     <body>
-        <div>
+        <div class="wrap">
             <ul class="first">
                 <li class="second"> 
-                    <a href="#">yijicaidan</a>
+                    <a href="#">一级菜单</a>
                     <ul>
-                        <li><a href="#">111</a></li>
-                        <li><a href="#">222</a></li>
-                        <li><a href="#">333</a></li>
+                        <li><a href="#">二级菜单</a></li>
+                        <li><a href="#">二级菜单</a></li>
+                        <li><a href="#">二级菜单</a></li>
                     </ul>
                 </li>
                 <li class="second">
-                    <a href="#">yijicaidan</a>
-                    <ul><li><a href="#">111</a></li>
-                        <li><a href="#">222</a></li>
-                        <li><a href="#">333</a></li>
+                    <a href="#">一级菜单</a>
+                    <ul><li><a href="#">二级菜单</a></li>
+                        <li><a href="#">二级菜单</a></li>
+                        <li><a href="#">二级菜单</a></li>
                     </ul>
                 </li>
                 <li class="second"> 
-                    <a href="#">yijicaidan</a>
+                    <a href="#">一级菜单</a>
                     <ul>
-                        <li><a href="#">111</a></li>
-                        <li><a href="#">222</a></li>
-                        <li><a href="#">333</a></li>
+                        <li><a href="#">二级菜单</a></li>
+                        <li><a href="#">二级菜单</a></li>
+                        <li><a href="#">二级菜单</a></li>
                     </ul>
                 </li>
             </ul>
@@ -37,8 +37,18 @@
 </html>
 <script>
     $(function(){
-        $('div>ul>li').hover(function(){
-            $(this).children().stop().slideToggle();
-        });
+        //1、在一级菜单上设置鼠标移入事件，二级菜单显示
+        $('.second').mouseenter(function(){
+            $(this).children('ul').show();
+            //$(this).css('display','block')
+        })
+        
+        //2、在一级菜单上设置鼠标移出事件，二级菜单隐藏
+        $('.second').mouseleave(function(){
+            $(this).children.hide();
+            //$(this).css('display','none')
+        })
+        
     });
 </script>
+
